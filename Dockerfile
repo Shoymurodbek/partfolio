@@ -32,6 +32,6 @@ COPY . .
 RUN composer install --no-dev --optimize-autoloader
 
 # Laravel papkalariga ruxsat berish
-RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
+RUN php artisan migrate --force
 
 EXPOSE 80
